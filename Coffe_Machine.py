@@ -21,14 +21,22 @@ def buy():
     global beans
     global money
     global water
+    if water < 200:
+        print("Sorry, not enough water!")
+    elif milk < 75:
+        print("Sorry, not enough milk!")
+    elif beans < 16:
+        print("Sorry, not enough beans!")
+    elif disposable_cups < 1:
+        print("Sorry, not enough disposable cups!")
+    else:
+        print("I have enough resources, making you a coffee!")
     if kind == '1':
         if water >= 200 and beans >= 16 and disposable_cups >= 1:
             disposable_cups -= 1
             water -= 250
             beans -= 16
             money += 4
-        elif water < 200:
-            print("Sorry, not enough water!")
     if kind == '2':
         if water >= 200 and beans >= 16 and disposable_cups >= 1 and milk >= 75:
             disposable_cups -= 1
@@ -36,8 +44,6 @@ def buy():
             milk -= 75
             beans -= 20
             money += 7
-        elif milk < 75:
-            print("Sorry, not enough milk!")
     if kind == '3':
         if water >= 200 and beans >= 16 and disposable_cups >= 1 and milk >= 75:
             disposable_cups -= 1
@@ -45,16 +51,8 @@ def buy():
             milk -= 100
             beans -= 12
             money += 6
-        elif milk < 75:
-            print("Sorry, not enough milk!")
     elif kind == 'back':
         back()
-    elif beans < 16:
-        print("Sorry, not enough beans!")
-    elif disposable_cups < 1:
-        print("Sorry, not enough disposable cups!")
-    else:
-        print("I have enough resources, making you a coffee!")
 
 
 def fill():
