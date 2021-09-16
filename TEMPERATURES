@@ -1,0 +1,17 @@
+import sys
+import math
+
+n = int(input())
+t = input()
+res = ''
+if(n == 0):
+    print("0")
+else:
+    t_split = t.split()
+    res = t_split[0]
+for t in t_split:
+        if abs(int(t)) < abs(int(res)):
+            res = t
+        elif abs(int(t)) == abs(int(res)):
+            res = max(int(t),int(res)) 
+print(res)
