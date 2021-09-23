@@ -1,0 +1,17 @@
+def iq_test(numbers):
+    a = [int(x) for x in numbers.split()]
+    c = 0
+    k = 0
+    c1 = 0
+    c2 = 0
+    for i in a:
+        if i%2 == 0:
+            c+=1
+            c1 = a.index(i)
+        else:
+            k+=1
+            c2 = a.index(i)
+    if(c>k):
+        return c2+1
+    else:
+        return c1+1
