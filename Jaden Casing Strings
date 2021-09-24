@@ -1,0 +1,3 @@
+def to_jaden_case(string):
+    lst = [w[0].upper() + w[1:] for w in string.split()]
+    return " ".join(lst)
