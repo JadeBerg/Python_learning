@@ -1,0 +1,6 @@
+def disemvowel(s):
+    a =  'aoyeuiAOYEUI'
+    for c in s:
+        if c in a:
+            s = s.replace(c,'')
+    return s
