@@ -1,0 +1,17 @@
+def dirReduc(arr):
+    res = []
+    n = arr.count("NORTH")
+    s = arr.count("SOUTH")
+    e = arr.count("EAST")
+    w = arr.count("WEST")
+    
+    if n>s:
+        res.append("NORTH")
+    elif n<s:
+        res.append("SOUTH")
+    if e>w:
+        res.append("EAST")
+    elif e<w:
+        res.append("WEST")
+    
+    return res
