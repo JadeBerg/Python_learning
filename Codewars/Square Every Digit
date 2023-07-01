@@ -1,0 +1,3 @@
+def square_digits(num):
+    n = map(int, str(num))
+    return int(''.join(map(str, [i ** 2 for i in n])))
